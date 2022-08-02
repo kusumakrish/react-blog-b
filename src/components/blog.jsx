@@ -6,16 +6,17 @@ const Blog = () => {
     const {id} = useParams();
     const [Blog , setBlog] = useState({});
     const [apiblog , setApiblog] = useState([]);
-    useEffect(()=>{
-      axios.get(`https://kalvakollu.herokuapp.com/`).then(response=>{console.log(response);setApiblog(response.data)});
-      },[]);
+    // useEffect(()=>{
+    //   axios.get(`https://kalvakollu.herokuapp.com/`).then(response=>{console.log(response);setApiblog(response.data)});
+    //   },[]);
     
       useEffect(()=>{
+        axios.get(`https://kalvakollu.herokuapp.com/`).then(response=>{console.log(response);setApiblog(response.data)});
         let blog = apiblog.find(blog=>blog.id === parseInt(id));
       if(blog){
         setBlog(blog);
       }
-      })
+      },[id,apiblog])
       console.log(apiblog);
       console.log(Blog);
   return (
