@@ -1,0 +1,17 @@
+.blog-heading{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 30px;
+}
+.blog-img{
+    margin-left: 430px;
+    margin-top: 20px;
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+}
+.blog-description{
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 30px;
+}
